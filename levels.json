@@ -1,0 +1,26 @@
+{
+  "1": {
+    "title": "Prvi zadatak: Ispis imena",
+    "intro": "U ovom zadatku naučićeš osnovnu Python funkciju `print()` kojom možeš ispisivati tekst na ekranu.",
+    "question": "Napiši kod koji ispisuje tvoje ime na ekranu.",
+    "hint": "Koristi funkciju `print()`.",
+    "starter_code": "# Ovde napiši svoj kod\n",
+    "expected_answer": "print(\"Alex\")"
+  },
+  "2": {
+    "title": "Drugi zadatak: Sabiranje brojeva",
+    "intro": "U ovom zadatku naučićeš kako se sabiraju brojevi i ispisuju rezultati.",
+    "question": "Napiši kod koji sabira 5 i 10 i ispisuje rezultat.",
+    "hint": "Koristi `print(5 + 10)`.",
+    "starter_code": "# Ovde napiši svoj kod\n",
+    "expected_answer": "print(15)"
+  },
+  "3": {
+    "title": "Treći zadatak: Višestruki ispis",
+    "intro": "Vežbamo više `print()` poziva.",
+    "question": "Napiši kod koji ispisuje tvoje ime i prezime, svako u novom redu.",
+    "hint": "Koristi dva `print()` poziva.",
+    "starter_code": "# Ovde napiši svoj kod\n",
+    "expected_answer": "print(\"Alex\")\nprint(\"Petrović\")"
+  }
+}

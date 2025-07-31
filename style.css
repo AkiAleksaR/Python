@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* lepa zelena boja */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #218838; /* tamnija zelena kad se prelazi mišem */
+}
+
+
+.level-list {
+    margin-top: 20px;
+}
+
+.level {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background: #2196f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.level:hover {
+    background: #1976d2;
+}
+
+.prijava{
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background: #2196f3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+.unos{
+    margin: 5px;
+}
+.posalji{
+    background: #2196f3;
+    color: white;
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    cursor: crosshair;
+
+
+}

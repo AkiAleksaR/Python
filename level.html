@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level {{ level_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<h1>Level {{ level_id }}: {{ title }}</h1>
+<p>{{ question }}</p>
+
+<form method="post">
+    <textarea name="answer" rows="6" cols="60" placeholder="Ovde napiši svoj Python kod...ako hoces"></textarea><br><br>
+    <button class="posalji" type="submit">Pošalji kod</button>
+</form>
+
+{% if is_correct %}
+<p style="color:green;">✔ Tačno!</p>
+{% elif submitted_code %}
+<p style="color:red;">✘ Nije tačno. Pokušaj ponovo.</p>
+{% endif %}
+
+
+
+{% if message %}
+<h3>Tvoj kod:</h3>
+<pre>{{ message }}</pre>
+{% endif %}
+
+<br><a href="/">← Nazad</a>
+</body>
+</html>

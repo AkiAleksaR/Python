@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Izaberi nivo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Izaberi nivo (strana {{ page }} od {{ total_pages }})</h1>
+
+<div class="level-list">
+  {% for level_id, level in levels.items() %}
+  <a href="/level/{{ level_id }}" class="level">Level {{ level_id }}</a>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if page > 1 %}
+  <a href="{{ url_for('levels', page=page-1) }}">⬅️ Prethodna</a>
+  {% endif %}
+  {% if page < total_pages %}
+  <a href="{{ url_for('levels', page=page+1) }}">Sledeća ➡️</a>
+  {% endif %}
+</div>
+
+<a href="/">⬅️ Nazad na početnu</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Quest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function mustLogin() {
+            alert("Morate se prijaviti da biste pristupili levelima.");
+            window.location.href = "/login";
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>🐍 Dobrodošao u Python Quest!</h1>
+
+    {% if user %}
+    <p>Prijavljen si kao <strong>{{ user }}</strong></p>
+    <p>Trenutni level: {{ current_level }}</p>
+    <a href="/level/{{ current_level }}">Nastavi sa igrom</a><br>
+    <a href="/logout">Odjavi se</a>
+
+    <h2>🎯 Izaberi svoj nivo:</h2>
+    <div class="level-list">
+        <a href="/levels/1" class="button-link">Izaberi nivo</a>
+
+
+    </div>
+
+    {% else %}
+    <p>
+        <a href="/login" class="button-link">Prijavi se</a>
+        ili
+        <a href="/register" class="button-link">Registruj se</a>
+    </p>
+    <p>Molimo prvo se prijavi ili registruj da bi pristupio levelima.</p>
+
+    <h2>🎯 Izaberi svoj nivo:</h2>
+    <div class="level-list">
+        <button onclick="mustLogin()" class="level">Level 1</button>
+        <button onclick="mustLogin()" class="level">Level 2</button>
+        <button onclick="mustLogin()" class="level">Level 3</button>
+
+    </div>
+    {% endif %}
+</div>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
